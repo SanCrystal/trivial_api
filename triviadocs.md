@@ -299,32 +299,32 @@ Trivia API is a api that provides a trivia game to the users. Here users can get
 
 #### POST /api/v1.0/quizzes (create quiz)
  - `POST /api/v1.0/quizzes` - Returns a random quiz with the questions in the database. A proper format of the body of the request should be a JSON object with the following keys: 
-        - `quiz_category` - The category of the questions in the quiz.
+    - `quiz_category` - The category of the questions in the quiz.
 
-        - `previous_questions` - An array of previous questions that have already been asked. [] (empty array) if it is the first question.
+    - `previous_questions` - An array of previous questions that have already been asked. [] (empty array) if it is the first question.
 
-    Example of a `POST` request to `/api/v1.0/quizzes`:
+Example of a `POST` request to `/api/v1.0/quizzes`:
 
     ```
         curl -X POST -H "Content-Type: application/json" -d '{"quiz_category":{"id":1,"type":"Science"},"previous_questions":[]}' http://localhost:5000/api/v1.0/quizzes
     ```
-    Expected response:
+Expected response:
     ```
-    {
-        "category": {
-            "id": 1,
-            "type": "Science"
-        },
-        "question": {
-            "answer": "Alexander Fleming",
-            "category": 1,
-            "difficulty": 3,
-            "id": 21,
-            "question": "Who discovered penicillin?"
-        },
-        "success": true
-    }
-```
+        {
+            "category": {
+                "id": 1,
+                "type": "Science"
+            },
+            "question": {
+                "answer": "Alexander Fleming",
+                "category": 1,
+                "difficulty": 3,
+                "id": 21,
+                "question": "Who discovered penicillin?"
+            },
+            "success": true
+        }
+    ```
 A subsequent request to the same endpoint will return a new question that is not one of the questions that have already been asked.
 
 Example of a `POST` request to `/api/v1.0/quizzes` with previous questions:
@@ -338,29 +338,29 @@ Example of a `POST` request to `/api/v1.0/quizzes` with previous questions:
             "question": "Who discovered penicillin?"
         }}' http://localhost:5000/api/v1.0/quizzes
     ```
-    Expected response:
+Expected response:
 
-```
-    {
-        "category": {
-            "id": 1,
-            "type": "Science"
-        },
-        "question": {
-            "answer": "The Liver",
-            "category": 1,
-            "difficulty": 4,
-            "id": 20,
-            "question": "What is the heaviest organ in the human body?"
-        },
-        "success": true
-    }
-```
-
+    ```
+        {
+            "category": {
+                "id": 1,
+                "type": "Science"
+            },
+            "question": {
+                "answer": "The Liver",
+                "category": 1,
+                "difficulty": 4,
+                "id": 20,
+                "question": "What is the heaviest organ in the human body?"
+            },
+            "success": true
+        }
+    ```
 ## Acknowledgements
+
  - I would like to thank [the Udacity team](https://www.udacity.com) for the support and guidance.
  - Special thanks to all the session leads, career coaches and students who have helped me learn how to structure codes that follows required formats.
  
 ## **Author**
-    - S[Amanze Arthur](https://www.github.com/sancrystal)
+    - [Amanze Arthur](https://www.github.com/sancrystal)
 
