@@ -362,5 +362,5 @@ Expected response:
  - Special thanks to all the session leads, career coaches and students who have helped me learn how to structure codes that follows required formats.
  
 ## **Author**
-    - [Amanze Arthur](https://www.github.com/sancrystal)
+- [Amanze Arthur](https://www.github.com/sancrystal)
 
